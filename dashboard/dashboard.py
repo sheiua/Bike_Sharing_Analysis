@@ -112,7 +112,7 @@ fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
 colors = sns.color_palette("husl", 12)
 
 # Plot untuk Casual User
-sns.barplot(x="casual_user", y="month", data=sum_casual_user_df, palette=colors, hue="month", legend=False, ax=ax[0])
+sns.barplot(x="casual_user", y="day", data=sum_casual_user_df, palette=colors, hue="day", legend=False, ax=ax[0])
 ax[0].set_ylabel(None)
 ax[0].set_xlabel(None)
 ax[0].set_title("Casual User", loc="center", fontsize=50)
@@ -120,7 +120,7 @@ ax[0].tick_params(axis ='y', labelsize=30)
 ax[0].tick_params(axis ='x', labelsize=30, rotation=45)
 
 # Plot untuk Registered User
-sns.barplot(x="registered_user", y="month", data=sum_registered_user_df, hue="month", palette=colors, legend=False, ax=ax[1])
+sns.barplot(x="registered_user", y="day", data=sum_registered_user_df, hue="day", palette=colors, legend=False, ax=ax[1])
 ax[1].set_ylabel(None)
 ax[1].set_xlabel(None)
 ax[1].invert_xaxis()
