@@ -43,7 +43,7 @@ def create_rfm_df(df):
 
 
 # Prepare dataframe
-day_df = pd.read_csv("day_clean.csv")
+day_df = pd.read_csv('dashboard/day_clean.csv')
 
 # Ensure the date column are of type datetime
 datetime_columns = ["date"]
@@ -137,7 +137,7 @@ st.subheader("2. Productivity of Bike Sharing by 24 Hours")
 @st.cache_data
 def load_data():
     # Assuming you have a CSV file called 'hour.csv'
-    return pd.read_csv('hour_clean.csv')
+    return pd.read_csv('dashboard/hour_clean.csv')
 
 # Load data
 hour = load_data()
