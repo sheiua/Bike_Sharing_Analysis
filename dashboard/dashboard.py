@@ -58,7 +58,7 @@ max_date = day_df["date"].max()
 
 with st.sidebar:
     # Adding a company logo
-    st.image("bike.jpg")
+    st.image('dashboard/bike.jpg')
 
     # Retrieve start_date & end_date from date_input
     start_date, end_date = st.date_input(
