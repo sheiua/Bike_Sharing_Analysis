@@ -109,7 +109,7 @@ st.pyplot(plt)
 # Number of Casual Users and Registered Users by Day
 st.subheader("1. Number of Casual Users and Registered Users by Day")
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
-colors = ["#72BCD4", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3"]
+colors = colors = ["#72BCD4", "#FFA07A", "#8A2BE2", "#32CD32", "#FF6347", "#4682B4", "#FFD700"]
 
 sns.barplot(x="casual_user", y="day", data=sum_casual_user_df, palette=colors, hue="day", legend=False, ax=ax[0])
 ax[0].set_ylabel(None)
@@ -130,8 +130,8 @@ ax[1].tick_params(axis ='x', labelsize=30, rotation=-45)
 
 st.pyplot(fig)
 
-# Productivity of Bike Sharing by 24 Hours
-st.subheader("2. Productivity of Bike Sharing by 24 Hours")
+# Productivity of Bike Sharing by 24 Hours in 12 Months
+st.subheader("2. Productivity of Bike Sharing by 24 Hours in 12 Months")
 
 # Load dataset
 @st.cache_data
@@ -198,7 +198,8 @@ with col3:
     st.metric("Average Monetary", value=avg_frequency)
 
 fig, ax = plt.subplots(nrows=1, ncols=3, figsize=(35, 15))
-colors = ["#90CAF9", "#90CAF9", "#90CAF9", "#90CAF9", "#90CAF9"]
+colors = ["#72BCD4", "#FFA07A", "#8A2BE2", "#32CD32", "#FF6347"]
+
 
 sns.barplot(y="recency", x="day", data=rfm_df.sort_values(by="recency", ascending=True).head(5), palette=colors, hue="day", legend=False, ax=ax[0])
 ax[0].set_ylabel(None)
