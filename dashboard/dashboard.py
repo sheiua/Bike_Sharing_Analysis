@@ -109,7 +109,7 @@ st.pyplot(plt)
 # Number of Casual Users and Registered Users by Day
 st.subheader("1. Number of Casual Users and Registered Users by Day")
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
-colors = sns.color_palette("husl", 12)
+colors = ["#72BCD4", "#FFA07A", "#8A2BE2", "#32CD32", "#FF6347", "#4682B4", "#FFD700"]
 
 # Plot untuk Casual User
 sns.barplot(x="casual_user", y="day", data=sum_casual_user_df, palette=colors, hue="day", legend=False, ax=ax[0])
