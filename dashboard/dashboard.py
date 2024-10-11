@@ -108,27 +108,27 @@ st.pyplot(plt)
 
 # Number of Casual Users and Registered Users by Day
 st.subheader("1. Number of Casual Users and Registered Users by Day")
-fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(24, 6))
-
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
 colors = sns.color_palette("husl", 12)
 
 # Plot untuk Casual User
-sns.barplot(x="casual_user", y="month", data=sum_casual_user, palette=colors, hue="month", ax=ax[0])
+sns.barplot(x="casual_user", y="month", data=sum_casual_user_df, palette=colors, hue="month", legend=False, ax=ax[0])
 ax[0].set_ylabel(None)
 ax[0].set_xlabel(None)
-ax[0].set_title("Casual User", loc="center", fontsize=15)
-ax[0].tick_params(axis='y', labelsize=12)
+ax[0].set_title("Casual User", loc="center", fontsize=50)
+ax[0].tick_params(axis ='y', labelsize=30)
+ax[0].tick_params(axis ='x', labelsize=30, rotation=45)
 
 # Plot untuk Registered User
-sns.barplot(x="registered_user", y="month", data=sum_registered_user, hue="month", palette=colors, ax=ax[1])
+sns.barplot(x="registered_user", y="month", data=sum_registered_user_df, hue="month", palette=colors, legend=False, ax=ax[1])
 ax[1].set_ylabel(None)
 ax[1].set_xlabel(None)
 ax[1].invert_xaxis()
 ax[1].yaxis.set_label_position("right")
 ax[1].yaxis.tick_right()
-ax[1].set_title("Registered User", loc="center", fontsize=15)
-ax[1].tick_params(axis='y', labelsize=12)
-
+ax[1].set_title("Registered User", loc="center", fontsize=50)
+ax[1].tick_params(axis='y', labelsize=30)
+ax[1].tick_params(axis ='x', labelsize=30, rotation=-45)
 st.pyplot(fig)
 
 # Productivity of Bike Sharing by 24 Hours in 12 Months
@@ -151,7 +151,7 @@ fig, ax = plt.subplots(figsize=(20,5))
 sns.pointplot(data=hour, x='hour', y='total_user', hue='month', errorbar=None, ax=ax)
 ax.set(title='Bike Sharing Productivity Based on Time')
 ax.set_ylabel('Total User')
-ax.set_xlabel('Day') 
+ax.set_xlabel('Hour') 
 plt.show()
 
 # Show plot in Streamlit
@@ -161,19 +161,26 @@ st.pyplot(fig)
 
 # The Effect of Weather and Season on Bike Sharing Productivity
 st.subheader("3. Number of Users by Weather and Season")
-fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(24, 6))
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
 colors = ["#72BCD4", "#FFA07A", "#8A2BE2", "#FF6347"]
 
-sns.barplot(y="total_user", x="weather", data=byweather.sort_values(by="total_user", ascending=False), palette=colors, ax=ax[0])
-ax[0].set_title("Number of User by Weather", loc="center", fontsize=15)
+sns.barplot(y="total_user", x="weather", data=byweather_df.sort_values(by="total_user", ascending=False), palette=colors, hue="weather", legend=False, ax=ax[0])
+ax[0].set_title("Number of User by Weather", loc="center", fontsize=50)
 ax[0].set_ylabel(None)
 ax[0].set_xlabel(None)
+ax[0].tick_params(axis ='y', labelsize=30)
+ax[0].tick_params(axis ='x', labelsize=30)
 ax[0].ticklabel_format(style='plain', axis='y')
 
-sns.barplot(y="total_user", x="season", data=byseason.sort_values(by="total_user", ascending=False), palette=colors, ax=ax[1])
+sns.barplot(y="total_user", x="season", data=byseason_df.sort_values(by="total_user", ascending=False), palette=colors, hue="season", legend=False, ax=ax[1])
 ax[1].set_title("Number of User by Season", loc="center", fontsize=15)
 ax[1].set_ylabel(None)
 ax[1].set_xlabel(None)
+ax[1].invert_xaxis()
+ax[1].yaxis.set_label_position("right")
+ax[1].yaxis.tick_right()
+ax[1].tick_params(axis='y', labelsize=30)
+ax[1].tick_params(axis ='x', labelsize=30)
 ax[1].ticklabel_format(style='plain', axis='y')
 
 st.pyplot(fig)
