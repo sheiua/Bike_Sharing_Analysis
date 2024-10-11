@@ -62,4 +62,4 @@ streamlit run dashboard.py
 ```
 
 Atau dapat langsung mengunjungi link streamlit berikut:
-#### [**Click here to view Bike Sharing Dashboard**](https://bike-sharing-7nppgfroixweaumaa2ujir.streamlit.app/)
+#### [**Click here to view Bike Sharing Dashboard**](https://bikesharinganalysis-i8yrnflbran5rjh6dxkn4y.streamlit.app/)
