@@ -173,7 +173,7 @@ ax[0].tick_params(axis ='x', labelsize=30)
 ax[0].ticklabel_format(style='plain', axis='y')
 
 sns.barplot(y="total_user", x="season", data=byseason_df.sort_values(by="total_user", ascending=False), palette=colors, hue="season", legend=False, ax=ax[1])
-ax[1].set_title("Number of User by Season", loc="center", fontsize=15)
+ax[1].set_title("Number of User by Season", loc="center", fontsize=50)
 ax[1].set_ylabel(None)
 ax[1].set_xlabel(None)
 ax[1].invert_xaxis()
