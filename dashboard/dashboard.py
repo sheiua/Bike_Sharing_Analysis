@@ -43,7 +43,7 @@ def create_rfm_df(df):
 
 
 # Prepare dataframe
-day_df = pd.read_csv('dashboard/day_clean.csv')
+day_df = pd.read_csv("dashboard/day_clean.csv")
 
 # Ensure the date column are of type datetime
 datetime_columns = ["date"]
@@ -58,7 +58,7 @@ max_date = day_df["date"].max()
 
 with st.sidebar:
     # Adding a company logo
-    st.image('dashboard/bike.jpg')
+    st.image("dashboard/bike.jpg")
 
     # Retrieve start_date & end_date from date_input
     start_date, end_date = st.date_input(
@@ -141,11 +141,6 @@ def load_data():
 
 # Load data
 hour = load_data()
-
-# Sidebar section (optional for additional inputs)
-with st.sidebar:
-    st.title("Bike Sharing Dashboard")
-    st.write("Select filters to customize your view.")
 
 # Main section
 st.write("This dashboard visualizes bike sharing data based on time (hourly) of day and working day status.")
