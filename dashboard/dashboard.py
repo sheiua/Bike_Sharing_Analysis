@@ -147,7 +147,7 @@ hour = load_data()
 st.write("This dashboard visualizes bike sharing data based on time (hourly) of day and working day status.")
 
 # Plot visualization
-fig, ax = plt.subplots(figsize=(35,15))
+fig, ax = plt.subplots(figsize=(20,5))
 sns.pointplot(data=hour, x='hour', y='total_user', hue='month', errorbar=None, ax=ax)
 ax.set(title='Bike Sharing Productivity Based on Time')
 ax.set_ylabel('Total User')
