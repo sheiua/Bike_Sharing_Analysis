@@ -107,7 +107,7 @@ plt.tight_layout()
 st.pyplot(plt)
 
 # Number of Casual Users and Registered Users by Day
-st.subheader("1. Number of Casual Users and Registered Users by Day IN 2011")
+st.subheader("1. Number of Casual Users and Registered Users by Day in 2011")
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
 colors = ["#72BCD4", "#FFA07A", "#8A2BE2", "#32CD32", "#FF6347", "#4682B4", "#FFD700"]
 
