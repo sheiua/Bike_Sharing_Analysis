@@ -107,7 +107,7 @@ plt.tight_layout()
 st.pyplot(plt)
 
 # Number of Casual Users and Registered Users by Day
-st.subheader("1. Number of Casual Users and Registered Users by Day")
+st.subheader("1. Number of Casual Users and Registered Users by Day IN 2011")
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
 colors = ["#72BCD4", "#FFA07A", "#8A2BE2", "#32CD32", "#FF6347", "#4682B4", "#FFD700"]
 
@@ -132,7 +132,7 @@ ax[1].tick_params(axis ='x', labelsize=30, rotation=-45)
 st.pyplot(fig)
 
 # Productivity of Bike Sharing by 24 Hours in 12 Months
-st.subheader("2. Productivity of Bike Sharing by 24 Hours in 12 Months")
+st.subheader("2. Bike Share Productivity in 24 Hours for 12 Months in 2012")
 
 # Load dataset
 @st.cache_data
